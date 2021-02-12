@@ -1,14 +1,12 @@
-package com.yxm.c2c.social.govern.reviewer;
-import com.yxm.c2c.social.govern.reviewer.db.DruidDataSourceConfig;
+package com.yxm.c2c.social.govern.reward;
+import com.yxm.c2c.social.govern.reward.db.DruidDataSourceConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @Import(DruidDataSourceConfig.class)
-public class Application {
-
+public class RewardApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(RewardApplication.class, args);
     }
-
 }

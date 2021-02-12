@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="c2c-social-govern-reward" />
+        <module name="c2c-social-govern-reviewer" />
+        <module name="c2c-social-govern-reward-api" />
+        <module name="c2c-social-govern-reviewer-api" />
+        <module name="c2c-social-govern-report" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="c2c-social-govern" target="1.5" />
+      <module name="c2c-social-govern-report" target="1.8" />
+      <module name="c2c-social-govern-reviewer" target="1.8" />
+      <module name="c2c-social-govern-reviewer-api" target="1.5" />
+      <module name="c2c-social-govern-reward" target="1.8" />
+      <module name="c2c-social-govern-reward-api" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

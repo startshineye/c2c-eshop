@@ -1,3 +1,7 @@
-com/yxm/c2c/social/govern/reward/Application.class
+com/yxm/c2c/social/govern/reward/dao/impl/RewardCoinDAOImpl.class
 com/yxm/c2c/social/govern/reward/service/RewardServiceImpl.class
 com/yxm/c2c/social/govern/reward/db/DruidDataSourceConfig.class
+com/yxm/c2c/social/govern/reward/RewardApplication.class
+com/yxm/c2c/social/govern/reward/dao/RewardCoinDAO.class
+com/yxm/c2c/social/govern/reward/domain/RewardCoin.class
+com/yxm/c2c/social/govern/reward/mapper/RewardCoinMapper.class

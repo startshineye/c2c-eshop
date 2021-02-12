@@ -16,4 +16,13 @@ public class ReportTaskDAOImpl implements ReportTaskDAO {
     public void save(ReportTask task) {
         mapper.insert(task);
     }
+    @Override
+    public ReportTask getById(Long id) {
+        return mapper.selectById(id);
+    }
+
+    @Override
+    public void update(ReportTask reportTask) {
+        mapper.update(reportTask);
+    }
 }

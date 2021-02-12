@@ -39,4 +39,31 @@ public class ReviewerServiceImpl implements ReviewerService {
         }
         return reviewers;
     }
+
+    @Override
+    public void finishVote(Long reviewerId, Long reportTaskId) {
+        ReviewerTaskStatus reviewerTaskStatus = new ReviewerTaskStatus();
+        reviewerTaskStatus.setReviewerId(reviewerId);
+        reviewerTaskStatus.setReportTaskId(reportTaskId);
+        reviewerTaskStatus.setStatus(ReviewerTaskStatus.FINISHED);
+        taskStatusDAO.update(reviewerTaskStatus);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

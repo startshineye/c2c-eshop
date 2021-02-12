@@ -3,6 +3,9 @@ package com.yxm.c2c.social.govern.report.domain;
  * 举报任务
  */
 public class ReportTask {
+    public static final Integer VOTE_RESULT_UNKNOWN = -1;
+    public static final Integer VOTE_RESULT_APPROVED = 1;
+    public static final Integer VOTE_RESULT_UNAPPROVED = 2;
     /**
      * 举报任务id
      */
@@ -23,6 +26,10 @@ public class ReportTask {
      * 举报目标对象id
      */
     private Long targetId;
+    /**
+     * 举报任务的投票结果
+     */
+    private Integer voteResult;
 
     public Long getId() {
         return id;
@@ -62,5 +69,13 @@ public class ReportTask {
 
     public void setTargetId(Long targetId) {
         this.targetId = targetId;
+    }
+
+    public Integer getVoteResult() {
+        return voteResult;
+    }
+
+    public void setVoteResult(Integer voteResult) {
+        this.voteResult = voteResult;
     }
 }

@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/c2c-social-govern.iml" filepath="$PROJECT_DIR$/.idea/c2c-social-govern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c2c-social-govern-report/c2c-social-govern-report.iml" filepath="$PROJECT_DIR$/c2c-social-govern-report/c2c-social-govern-report.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c2c-social-govern-reviewer/c2c-social-govern-reviewer.iml" filepath="$PROJECT_DIR$/c2c-social-govern-reviewer/c2c-social-govern-reviewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c2c-social-govern-reviewer-api/c2c-social-govern-reviewer-api.iml" filepath="$PROJECT_DIR$/c2c-social-govern-reviewer-api/c2c-social-govern-reviewer-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c2c-social-govern-reward/c2c-social-govern-reward.iml" filepath="$PROJECT_DIR$/c2c-social-govern-reward/c2c-social-govern-reward.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c2c-social-govern-reward-api/c2c-social-govern-reward-api.iml" filepath="$PROJECT_DIR$/c2c-social-govern-reward-api/c2c-social-govern-reward-api.iml" />
     </modules>
   </component>
 </project>

@@ -1,3 +1,7 @@
+com/yxm/c2c/social/govern/reviewer/ReviewerApplication.class
+com/yxm/c2c/social/govern/reviewer/dao/ReviewerTaskStatusDAO.class
 com/yxm/c2c/social/govern/reviewer/service/ReviewerServiceImpl.class
-com/yxm/c2c/social/govern/reviewer/Application.class
 com/yxm/c2c/social/govern/reviewer/db/DruidDataSourceConfig.class
+com/yxm/c2c/social/govern/reviewer/dao/impl/ReviewerTaskStatusDAOImpl.class
+com/yxm/c2c/social/govern/reviewer/mapper/ReviewerTaskStatusMapper.class
+com/yxm/c2c/social/govern/reviewer/domain/ReviewerTaskStatus.class

@@ -15,4 +15,9 @@ public class ReportTaskServiceImpl implements ReportTaskService {
     public void save(ReportTask task) {
         reportTaskDAO.save(task);
     }
+
+    @Override
+    public ReportTask getById(Long id) {
+        return reportTaskDAO.getById(id);
+    }
 }

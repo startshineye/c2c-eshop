@@ -1,3 +1,15 @@
-com/yxm/c2c/social/govern/report/Application.class
+com/yxm/c2c/social/govern/report/dao/impl/ReportTaskVoteDAOImpl.class
+com/yxm/c2c/social/govern/report/ReportApplication.class
+com/yxm/c2c/social/govern/report/dao/impl/ReportTaskDAOImpl.class
+com/yxm/c2c/social/govern/report/domain/ReportTaskVote.class
+com/yxm/c2c/social/govern/report/dao/ReportTaskVoteDAO.class
+com/yxm/c2c/social/govern/report/service/ReportTaskVoteService.class
 com/yxm/c2c/social/govern/report/controller/ReportController.class
+com/yxm/c2c/social/govern/report/mapper/ReportTaskMapper.class
+com/yxm/c2c/social/govern/report/service/impl/ReportTaskVoteServiceImpl.class
+com/yxm/c2c/social/govern/report/mapper/ReportTaskVoteMapper.class
+com/yxm/c2c/social/govern/report/service/impl/ReportTaskServiceImpl.class
+com/yxm/c2c/social/govern/report/service/ReportTaskService.class
+com/yxm/c2c/social/govern/report/db/DruidDataSourceConfig.class
 com/yxm/c2c/social/govern/report/domain/ReportTask.class
+com/yxm/c2c/social/govern/report/dao/ReportTaskDAO.class

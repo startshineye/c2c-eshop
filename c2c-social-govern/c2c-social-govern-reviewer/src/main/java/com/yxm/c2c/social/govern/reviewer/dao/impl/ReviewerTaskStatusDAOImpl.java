@@ -16,4 +16,9 @@ public class ReviewerTaskStatusDAOImpl implements ReviewerTaskStatusDAO {
     public void save(ReviewerTaskStatus taskStatus) {
         taskStatusMapper.insert(taskStatus);
     }
+
+    @Override
+    public void update(ReviewerTaskStatus reviewerTaskStatus) {
+        taskStatusMapper.update(reviewerTaskStatus);
+    }
 }
