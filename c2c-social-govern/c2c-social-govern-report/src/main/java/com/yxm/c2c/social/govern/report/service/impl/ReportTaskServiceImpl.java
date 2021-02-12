@@ -1,8 +1,6 @@
 package com.yxm.c2c.social.govern.report.service.impl;
-
 import com.yxm.c2c.social.govern.report.dao.ReportTaskDAO;
 import com.yxm.c2c.social.govern.report.domain.ReportTask;
-import com.yxm.c2c.social.govern.report.mapper.ReportTaskMapper;
 import com.yxm.c2c.social.govern.report.service.ReportTaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
