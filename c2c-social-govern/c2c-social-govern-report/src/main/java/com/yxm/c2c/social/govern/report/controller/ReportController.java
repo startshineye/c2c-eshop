@@ -27,12 +27,14 @@ public class ReportController {
 
     @Reference(version = "1.0.0",
             interfaceClass = ReviewerService.class,
-            cluster = "failfast")
+            cluster = "failfast",
+            check = false)
     private ReviewerService reviewerService;
 
     @Reference(version = "1.0.0",
             interfaceClass = RewardService.class,
-            cluster = "failfast")
+            cluster = "failfast",
+             check = false)
     private RewardService rewardService;
     /**
      * 提交举报接口

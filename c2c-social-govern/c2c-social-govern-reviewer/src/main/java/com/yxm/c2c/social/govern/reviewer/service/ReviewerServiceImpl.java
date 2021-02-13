@@ -5,6 +5,8 @@ import com.yxm.c2c.social.govern.reviewer.dao.ReviewerTaskStatusDAO;
 import com.yxm.c2c.social.govern.reviewer.domain.ReviewerTaskStatus;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
 import java.util.ArrayList;
 import java.util.List;
 @Service(
@@ -15,11 +17,15 @@ import java.util.List;
 )
 public class ReviewerServiceImpl implements ReviewerService {
 
+    @Value("${spring.profiles.active}")
+    private String env;
+
     @Autowired
     private ReviewerTaskStatusDAO taskStatusDAO;
 
     @Override
     public List<Long> selectReviewers(Long reportTaskId) {
+        System.out.println("运行环境: "+env);
         /**
          * 构建返回的reviewerIds
          * 将对应关系存放在数据库
@@ -42,6 +48,7 @@ public class ReviewerServiceImpl implements ReviewerService {
 
     @Override
     public void finishVote(Long reviewerId, Long reportTaskId) {
+        System.out.println("运行环境: "+env);
         ReviewerTaskStatus reviewerTaskStatus = new ReviewerTaskStatus();
         reviewerTaskStatus.setReviewerId(reviewerId);
         reviewerTaskStatus.setReportTaskId(reportTaskId);
