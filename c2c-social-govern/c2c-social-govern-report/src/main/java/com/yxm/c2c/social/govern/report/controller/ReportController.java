@@ -1,4 +1,7 @@
 package com.yxm.c2c.social.govern.report.controller;
+import com.alibaba.csp.sentinel.Entry;
+import com.alibaba.csp.sentinel.SphU;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.yxm.c2c.social.govern.report.domain.ReportTask;
 import com.yxm.c2c.social.govern.report.domain.ReportTaskVote;
 import com.yxm.c2c.social.govern.report.service.ReportTaskService;
@@ -44,21 +47,32 @@ public class ReportController {
     @GetMapping("/report")
     public String report(ReportTask reportTask) {
         //http://localhost:8080/report?type=1&reportUserId=1&reportContent=nihao&targetId=1&voteResult=-1
-        // 封装举报任务对象
-        /*reportTask.setType(type);
-        reportTask.setReportUserId(reportUserId);
-        reportTask.setReportContent(reportContent);
-        reportTask.setTargetId(targetId);*/
-
         // 在本地数据库增加一个举报任务
         reportTaskService.save(reportTask);
-
         // 举报任务分配给评审员
-        List<Long> reviewerIds = reviewerService.selectReviewers(reportTask.getId());
+        List<Long> reviewerIds = null;
+
+        Entry entry = null;
+        try {
+            entry = SphU.entry("ReviewerServiceResource");
+            // 调用评审员服务，选择一批评审员
+            reviewerIds = reviewerService.selectReviewers(reportTask.getId());
+        } catch (BlockException e1) {
+            System.out.println("系统熔断或者限流，无法正常运行......");
+            return "fail";
+        } catch (Exception e) {
+            System.out.println("系统出现异常，无法正常运行......");
+            return "fail";
+        } finally {
+            if (entry != null) {
+                entry.exit();
+            }
+        }
 
         // 在本地数据库初始化这批评审员对举报任务的投票状态
-        reportTaskVoteService.initVotes(reviewerIds,reportTask.getId());
-
+        if(reviewerIds!=null){
+            reportTaskVoteService.initVotes(reviewerIds,reportTask.getId());
+        }
         // 模拟发送push消息给评审员
         System.out.println("模拟发送push消息给评审员.....");
         return "success";
